@@ -1,0 +1,21 @@
+{
+  "name": "cycle",
+  "version": "1.0.0",
+  "description": "cycle trading",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [
+    "cycle",
+    "trading",
+    "kite",
+    "zerodha"
+  ],
+  "author": "Sunil Kakarlapudi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.0"
+  }
+}
