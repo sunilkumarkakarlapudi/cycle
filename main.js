@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
+const path = require("path");
 
 // The list of open windows
 let windows = new Set()
@@ -7,7 +8,10 @@ let windows = new Set()
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences:{
+      preload: path.join(__dirname,'preload.js')
+    }
   })
   win.loadFile('index.html')
   windows.add(win)
