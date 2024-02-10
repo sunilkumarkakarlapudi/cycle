@@ -5,17 +5,6 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
-    <script>
-      const electron = require('electron')
-      const remote = electron.remote;
-      // Import the ipcRenderer Module from Electron 
-      const ipc = electron.ipcRenderer;
-      
-      var openPriceLadder = function(){
-        // We need to communicate to the main process asking to open new window.
-        ipc.send('openPriceLadder','');
-      }
-    </script>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -23,6 +12,12 @@
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.
 
-    <button onclick=""></button>
+    <input type="text" id="instrumentName"/>
+    <button type="button" id="openPriceLadderButton">Open Price Ladder</button>
+
+    <div>There is supposed to be a webView under this </div>
+
+    <webview id="foo" src="https://www.github.com/" style="display:inline-flex; width:640px; height:480px"></webview>
+    <script src="index.js"></script>
   </body>
 </html>
